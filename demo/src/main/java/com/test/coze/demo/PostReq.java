@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 public class PostReq {
-    private String content;
+    private String content; 
     private String title;
 }
