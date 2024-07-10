@@ -45,6 +45,7 @@ public class PostsController {
     @PostMapping("/posts")
     public ResponseEntity<Posts> createPost(@RequestBody PostReq postReq) {
         try {
+            System.out.println("createPost: "+postReq.getTitle()+"----"+ postReq.getContent());
             Posts p = postRepository
                     .save(new Posts(postReq.getTitle(), postReq.getContent()));
             return new ResponseEntity<>(p, HttpStatus.CREATED);
